@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"urlshort/mapper"
+	"urlshort/server"
 )
 
 func main() {
@@ -10,4 +11,6 @@ func main() {
 	fmt.Println(m)
 	m.RegisterRoute("https://gobyexample.com/errors")
 	fmt.Println(m)
+
+	server.RunServer(m)
 }
