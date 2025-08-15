@@ -1,9 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"urlshort/mapper"
+)
 
 func main() {
-	m := MakeMapMapper()
+	var m mapper.Mapper = mapper.NewMapMapper()
 	fmt.Println(m)
 	m.RegisterRoute("https://gobyexample.com/errors")
 	fmt.Println(m)
