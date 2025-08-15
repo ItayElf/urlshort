@@ -9,6 +9,7 @@ const urlHashLength = 6
 
 type Mapper interface {
 	RegisterRoute(endpoint string) (string, error)
+	GetRouteByHash(hash string) (string, error)
 }
 
 func generateEndpointHash(endpoint string) string {

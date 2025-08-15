@@ -23,6 +23,13 @@ func (m *MapMapper) RegisterRoute(endpoint string) (string, error) {
 	return hash, nil
 }
 
+func (m *MapMapper) GetRouteByHash(hash string) (string, error) {
+	if v, exists := m.urls[hash]; exists {
+		return v, nil
+	}
+	return "", errors.New("no route was registered for requested hash")
+}
+
 func NewMapMapper() *MapMapper {
 	m := new(MapMapper)
 	m.urls = make(map[string]string)
