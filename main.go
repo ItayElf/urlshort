@@ -3,5 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Hello world")
+	m := MakeMapper()
+	fmt.Println(m)
+	m.RegisterRoute("https://gobyexample.com/errors")
+	fmt.Println(m)
 }
