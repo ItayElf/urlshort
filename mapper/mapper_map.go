@@ -1,6 +1,8 @@
 package mapper
 
-import "errors"
+import (
+	"errors"
+)
 
 type MapMapper struct {
 	urls map[string]string
